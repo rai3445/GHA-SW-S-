@@ -22,6 +22,6 @@ jobs:
           aws-region: ap-south-1
 
       - name: Sync files to S3
-        run: aws s3 sync . s3://gr-gha-static-website --delete --exclude ".git/*" --exclude ".github/*"
+        run: aws s3 sync . s3://gr-gha-static-website --delete --exclude ".git/*" --exclude ".github/*" 
 
 
