@@ -1,4 +1,5 @@
-name: Deploy HTML to S3
+name: Deploy HTML to S3 # This workflow deploys HTML to S3
+
 
 on:
   push:
