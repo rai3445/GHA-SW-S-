@@ -2,6 +2,8 @@ name: Deploy HTML to S3
 
 on:
   push:
+    branches:
+      - main  # ya jis branch se tum push kar rahe ho
 
 jobs:
   deploy:
@@ -19,5 +21,6 @@ jobs:
           aws-region: ap-south-1
 
       - name: Sync files to S3
-        run: aws s3 sync . s3://gr-gha-static-website --delete
+        run: aws s3 sync . s3://gr-gha-static-website --delete --exclude ".git/*" --exclude ".github/*"
+
 
